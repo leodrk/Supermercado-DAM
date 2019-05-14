@@ -1,7 +1,7 @@
 
 **Nombre del proyecto** 
 
-Supermercado DAM
+Supermercado DAME
 
 **Integrantes**  
 
