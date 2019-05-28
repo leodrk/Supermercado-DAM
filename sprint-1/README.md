@@ -33,19 +33,24 @@ Como Desarrollador quiero crear las clases necesarias para poder traer productos
 ## Estimado para proxima iteracion
 
 > **Crear logica para enlazar vista y modelo
-Como Desarollador quiero crear las clases necesarias para poder realizar el registro de productos desde la vista planteada  
+Como Desarollador quiero crear las clases 
+necesarias para poder realizar el registro de productos 
+desde la vista planteada  
 **Estimado:** 5 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
 
 > **Agregar a la vista comportamiento para terminar compra e iniciar una nueva
-Como Desarollador quiero agregar al diseño actual un boton para finalizar la compra para iniciar una nueva
+Como Desarollador quiero agregar al diseño actual un boton para finalizar 
+la compra para iniciar una nueva
+
 **Estimado:** 1 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
 
 > **Agregar comportamiento para reiniciar compra
-Como Desarollador quiero modelar el comportamiento de la finalizacion de compra
+Como Desarollador quiero modelar el comportamiento 
+de la finalizacion de compra
 **Estimado:** 5 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
@@ -56,7 +61,8 @@ Como Desarollador quiero modelar el comportamiento de la finalizacion de compra
 # High
 
 > ** Comunicación del grupo.
-> ** División de tareas en base a las capacidades de cada integrante en las distintas partes del proyecto.
+> ** División de tareas en base a las capacidades de cada 
+integrante en las distintas partes del proyecto.
 
 # Low
 
