@@ -7,7 +7,7 @@
 # Iteracion 1
 
 
-> **Diseñar vista con funcionalidad para registrar compra 
+> **DiseÃ±ar vista con funcionalidad para registrar compra 
 Como Desarollador quiero crear una vista inicial para presentarsela al cliente    
 **Estimado:** 2 puntos.  
 **Estado:** Pendiente.  
@@ -39,7 +39,7 @@ Como Desarollador quiero crear las clases necesarias para poder realizar el regi
 **Encargado:
 
 > **Agregar a la vista comportamiento para terminar compra e iniciar una nueva
-Como Desarollador quiero agregar al diseño actual un boton para finalizar la compra para iniciar una nueva
+Como Desarollador quiero agregar al diseÃ±o actual un boton para finalizar la compra para iniciar una nueva
 **Estimado:** 1 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
@@ -55,8 +55,8 @@ Como Desarollador quiero modelar el comportamiento de la finalizacion de compra
 
 # High
 
-> ** Comunicación del grupo.
-> ** División de tareas en base a las capacidades de cada integrante en las distintas partes del proyecto.
+> ** ComunicaciÃ³n del grupo.
+> ** DivisiÃ³n de tareas en base a las capacidades de cada integrante en las distintas partes del proyecto.
 
 # Low
 
