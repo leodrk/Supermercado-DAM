@@ -43,7 +43,6 @@ desde la vista planteada
 > **Agregar a la vista comportamiento para terminar compra e iniciar una nueva
 Como Desarollador quiero agregar al diseño actual un boton para finalizar 
 la compra para iniciar una nueva
-
 **Estimado:** 1 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
