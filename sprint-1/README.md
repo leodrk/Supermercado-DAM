@@ -1,4 +1,4 @@
-# **Backlog del Producto**
+﻿# **Backlog del Producto**
 
 #### *User Stories*
 
@@ -8,18 +8,18 @@
 
 
 > **Diseñar vista con funcionalidad para registrar compra 
-Como Desarollador quiero crear una vista inicial para presentarsela al cliente    
+Como Desarollador quiero crear una vista inicial con la funcionalidad de registrar producto para presentarsela al cliente    
 **Estimado:** 2 puntos.  
-**Estado:** Pendiente.  
-**Encargado:  
+**Estado:** Finalizado.  
+**Encargado: David Dominguez 
 
 
  > **Crear tabla con productos  
 Como Desarrollador quiero crear la tabla con productos para consultar sus datos  
 **Prioridad:** Alta.  
 **Estimado:** 2 puntos.  
-**Estado:** Pendiente.  
-**Encargado:  
+**Estado:** Finalizado.  
+**Encargado: Leonel Martos 
 
 
  > **Crear logica de persistencia  
@@ -27,7 +27,7 @@ Como Desarrollador quiero crear las clases necesarias para poder traer productos
 **Prioridad:** Alta.  
 **Estimado:** 3 puntos.  
 **Estado:** Pendiente.  
-**Encargado:  
+**Encargado: Eric Arnez
 
 
 ## Estimado para proxima iteracion
