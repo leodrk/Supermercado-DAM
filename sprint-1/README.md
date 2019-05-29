@@ -32,15 +32,20 @@ Como Desarrollador quiero crear las clases necesarias para poder traer productos
 
 ## Estimado para proxima iteracion
 
-> **Crear logica para enlazar vista y modelo
+> **Crear logica para registrar producto
 Como Desarollador quiero crear las clases 
-necesarias para poder realizar el registro de productos 
-desde la vista planteada  
-**Estimado:** 5 puntos.  
+necesarias para poder realizar el registro de productos a nivel modelo
+**Estimado:** 4 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
 
-> **Agregar a la vista comportamiento para terminar compra e iniciar una nueva
+> **Realizar el codigo de la vista con el boton de registro de productos
+Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial donde se registran productos
+**Estimado:** 4 puntos.  
+**Estado:** Pendiente.  
+**Encargado:
+
+> **Presentar diseño de vista con boton de finalizar compro
 Como Desarollador quiero agregar al diseño actual un boton para finalizar 
 la compra para iniciar una nueva
 **Estimado:** 1 puntos.  
@@ -49,8 +54,8 @@ la compra para iniciar una nueva
 
 > **Agregar comportamiento para reiniciar compra
 Como Desarollador quiero modelar el comportamiento 
-de la finalizacion de compra
-**Estimado:** 5 puntos.  
+de la finalizacion de compra a nivel modelo
+**Estimado:** 4 puntos.  
 **Estado:** Pendiente.  
 **Encargado:
 
