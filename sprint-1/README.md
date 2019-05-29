@@ -26,7 +26,7 @@ Como Desarrollador quiero crear la tabla con productos para consultar sus datos
 Como Desarrollador quiero crear las clases necesarias para poder traer productos de la base de datos
 **Prioridad:** Alta.  
 **Estimado:** 3 puntos.  
-**Estado:** Pendiente.  
+**Estado:** Finalizado.
 **Encargado: Eric Arnez
 
 
