@@ -2,14 +2,25 @@ package Supermercado;
 
 public class Producto  {
 
-    private int precio;
+    private int codigo;
     private String nombre;
+    private int precio;
+
 
     public Producto (String unNombre, int unPrecio){
         setPrecio(unPrecio);
         setNombre(unNombre);
     }
 
+    public Producto (int unCodigo, String unNombre, int unPrecio){
+        setCodigo(unCodigo);
+        setPrecio(unPrecio);
+        setNombre(unNombre);
+    }
+
+    private void setCodigo(int unCodigo){
+        this.codigo = unCodigo;
+    }
 
     public Producto() {
 	}
@@ -32,4 +43,8 @@ public class Producto  {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+    public int getCodigo() {
+        return codigo;
+    }
 }
