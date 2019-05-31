@@ -1,6 +1,6 @@
 package Supermercado.dao;
 
-import Supermercado.Producto;
+import Supermercado.model.Producto;
 
 public interface ProductoDAO {
 

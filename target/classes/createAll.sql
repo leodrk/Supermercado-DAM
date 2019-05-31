@@ -6,12 +6,12 @@ CREATE SCHEMA supermercado;
 USE supermercado;
 
 
-CREATE TABLE Productos (codigo int NOT NULL UNIQUE, 
+CREATE TABLE Productos (codigo int NOT NULL UNIQUE,
 						nombre VARCHAR (255) NOT NULL,
-						precio int NOT NULL);
+						precio float NOT NULL);
 
        INSERT INTO Productos (codigo, nombre, precio)
-       VALUES 
+       VALUES
     		(1103,"Leche", 30),
     		(1104,"Pan lactal", 90),
     		(1101,"Jugo de naranja", 50),
@@ -24,7 +24,7 @@ CREATE TABLE Productos (codigo int NOT NULL UNIQUE,
     		(3311, "Aceite", 110),
     		(3315, "Queso Rallado", 150),
     		(3313, "Arroz", 15),
-    		(3312, "Coca Cola 1,5L", 110),    
+    		(3312, "Coca Cola 1,5L", 110),
     		(3314, "Ketchup", 120),
     		(4419, "Pasta de dientes", 102),
     		(4418, "Alcohol Etilico", 300),
