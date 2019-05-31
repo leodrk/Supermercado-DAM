@@ -1,13 +1,15 @@
-package Supermercado;
+package Supermercado.model;
 
 public class Producto  {
 
     private int codigo;
     private String nombre;
-    private int precio;
+    private double precio;
 
+    public Producto() {
+    }
 
-    public Producto (String unNombre, int unPrecio){
+    public Producto (String unNombre, double unPrecio){
         setPrecio(unPrecio);
         setNombre(unNombre);
     }
@@ -22,15 +24,14 @@ public class Producto  {
         this.codigo = unCodigo;
     }
 
-    public Producto() {
-	}
 
 
-	public int getPrecio() {
+
+	public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
