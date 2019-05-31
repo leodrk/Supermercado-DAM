@@ -56,8 +56,8 @@ la compra para iniciar una nueva
 Como Desarollador quiero modelar el comportamiento 
 de la finalizacion de compra a nivel modelo
 **Estimado:** 4 puntos.  
-**Estado:** Pendiente.  
-**Encargado:
+**Estado:** Finalizado.  
+**Encargado: Eric Arnez.
 
 
 ## Retrospectiva del sprint

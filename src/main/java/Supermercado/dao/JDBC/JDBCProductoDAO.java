@@ -1,6 +1,6 @@
 package Supermercado.dao.JDBC;
 
-import Supermercado.Producto;
+import Supermercado.model.Producto;
 import Supermercado.dao.ConnectionBlock;
 import Supermercado.dao.ProductoDAO;
 
@@ -20,7 +20,7 @@ public class JDBCProductoDAO implements ProductoDAO {
             PreparedStatement ps = conn.prepareStatement("INSERT INTO productos (codigo, nombre, precio) VALUES (?,?,?)");
             ps.setInt(1, producto.getCodigo());
             ps.setString(2, producto.getNombre());
-			ps.setInt(3, producto.getPrecio());
+			ps.setDouble(3, producto.getPrecio());
             ps.execute();
 
             if (ps.getUpdateCount() != 1) {

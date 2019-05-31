@@ -3,6 +3,7 @@ package Supermercado;
 import static org.junit.Assert.assertEquals;
 
 import Supermercado.dao.JDBC.JDBCProductoDAO;
+import Supermercado.model.Producto;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
