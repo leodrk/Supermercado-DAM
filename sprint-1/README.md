@@ -36,8 +36,8 @@ Como Desarrollador quiero crear las clases necesarias para poder traer productos
 Como Desarollador quiero crear las clases 
 necesarias para poder realizar el registro de productos a nivel modelo
 **Estimado:** 4 puntos.  
-**Estado:** Pendiente.  
-**Encargado:
+**Estado:** Finalizado.  
+**Encargado: Leonel Martos
 
 > **Realizar el codigo de la vista con el boton de registro de productos
 Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial donde se registran productos
