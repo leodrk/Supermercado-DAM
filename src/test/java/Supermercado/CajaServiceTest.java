@@ -24,14 +24,14 @@ public class CajaServiceTest {
         caja = new Caja();
         producto = new Producto(1, "Manaos", 50);
         cajaService = new CajaService(caja);
-        dao.guardar(producto);
     }
 	
 	@Test
 	public void testRegistroUnaManaosDeCodigo1() {
+		dao.guardar(producto);
 		cajaService.registrarProducto(1);
 		assertTrue(caja.getCosteTotalActual() == 50);
 		assertTrue(caja.getProductosACobrar().size() == 1);
+		dao.borrarProducto(producto);
 	}
-
 }
