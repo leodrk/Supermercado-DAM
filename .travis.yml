@@ -4,4 +4,4 @@ services:
   - mysql
 
 before_script:
-- mysql -u root -e 'GRANT ALL ON stockmarket.* TO 'root'@'localhost';'
+- mysql -u root -e 'GRANT ALL ON Supermercado.* TO 'root'@'localhost';'
