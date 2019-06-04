@@ -31,3 +31,5 @@ CREATE TABLE Productos (codigo int NOT NULL UNIQUE,
     		(4416, "Cepillo de dientes", 100),
     		(4417, "Hisopos", 210),
     		(4420, "Papel higienico", 400);
+    		
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;
