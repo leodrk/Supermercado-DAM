@@ -9,3 +9,8 @@ before_script:
 test:
 - mysql -u root -p root -e 'GRANT ALL ON *.* TO 'root'@'localhost';'
   dist:precise
+
+before_install:
+  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('root') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - sudo mysql_upgrade -u root -pnew_password
+  - sudo service mysql restart
