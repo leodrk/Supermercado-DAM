@@ -1,7 +1,1 @@
 language: java
-
-services:
-  - mysql
-
-before_script:
-- mysql -u root -e 'GRANT ALL ON *.* TO 'root'@'localhost';'
