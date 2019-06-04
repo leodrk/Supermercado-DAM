@@ -5,3 +5,6 @@ services:
 
 before_script:
 - mysql -u root -e 'GRANT ALL ON Supermercado.* TO 'root'@'localhost';'
+
+test:
+  dist:precise
