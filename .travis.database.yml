@@ -1,0 +1,9 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+
+test:
+  <<: *default
+  database: supermercado
+  password: root
