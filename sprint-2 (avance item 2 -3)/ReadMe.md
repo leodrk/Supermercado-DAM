@@ -62,6 +62,12 @@ nombre y precio, en las variables de items de la compra.
 **Para:** Almacenar nombre, codigo y valor del producto.
 **Encargado: David Dominguez.
 
+**Desarrollo de logica para el stock de los productos.
+**Como:** Desarrollador 
+**Quiero:** Generar logica de stock para poder controlar la cantidad de productos actuales
+**Para:** llevar un control en mi sistema de la variedad de productos y poder efectivizar compras en un futuro . 
+**Encargado: Bernal Julian 
+
 
 ## Retrospectiva del sprint
 
