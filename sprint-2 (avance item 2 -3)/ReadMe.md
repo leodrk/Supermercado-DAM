@@ -47,7 +47,6 @@ Como desarrollador quiero agregar un campo stock en los productos tanto en model
 **Encargado: Leonel Martos.
 
 
-
 **Desarrollo de boton de ingreso de producto, para que con el código ingresado respectivo pueda tomar ese valor y trabajar sobre el referenciándole su respectivo nombre, código y precio.
 **Como:** Desarrollador 
 **Quiero:** Crear una boton de ingreso de producto
@@ -68,6 +67,13 @@ nombre y precio, en las variables de items de la compra.
 **Para:** llevar un control en mi sistema de la variedad de productos y poder efectivizar compras en un futuro . 
 **Encargado: Bernal Julian 
 
+**Desarrollo de Logica De la Persistencia de las Facturas
+**Como:** Desarrollador 
+**Quiero:** Generar la persistencia en la base de datos de las facturas
+**Para:** saber la recaudacion total. 
+**Estimado:** 4 puntos.  
+**Estado:** Pendiente.  
+**Encargado: Eric Arnez
 
 ## Retrospectiva del sprint
 
