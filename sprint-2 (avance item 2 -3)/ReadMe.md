@@ -48,6 +48,20 @@ Como desarrollador quiero agregar un campo stock en los productos tanto en model
 
 
 
+**Desarrollo de boton de ingreso de producto, para que con el código ingresado respectivo pueda tomar ese valor y trabajar sobre el referenciándole su respectivo nombre, código y precio.
+**Como:** Desarrollador 
+**Quiero:** Crear una boton de ingreso de producto
+**Para:** Poder que al activarlo sea posible internamente almacenar el código de producto y trabajar sobre él.
+**Encargado: David Dominguez.
+
+
+**Desarrollo de logica en el boton de ingresar producto, en donde dado el valor del codigo de producto se tomara su 
+nombre y precio, en las variables de items de la compra.
+**Como:** Desarrollador 
+**Quiero:** Generar logica operativa de la herramienta de ingresar producto
+**Para:** Almacenar nombre, codigo y valor del producto.
+**Encargado: David Dominguez.
+
 
 ## Retrospectiva del sprint
 
