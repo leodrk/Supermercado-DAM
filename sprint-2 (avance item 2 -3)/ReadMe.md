@@ -28,17 +28,7 @@ la compra para iniciar una nueva
 **Encargado: David Dominguez
 
 Para la solucion de este item, se realizo el procedimiento detallado, en el anexo documento de word,
-con paso a paso desde la ID, y el grafico de velocidad adjunto del mismo.
-
-> **Realizar el código de la vista con el boton de registro de productos
-Como Desarollador desarrollar el código que dibuja la ventana inicial donde se registran productos
-**Estimado:** 4 puntos.  
-**Estado:** Finalizado.  
-**Encargado: David Dominguez
-
-Para la solucion de este item, se realizo el procedimiento detallado, en el anexo documento de word,
-con paso a paso desde la ID, y el grafico de velocidad adjunto del mismo.
-
+con paso a paso desde la ID, y el grafico de velocidad adjunto del mismo
 
 > **Agregar comportamiento para reiniciar compra
 Como Desarollador quiero modelar el comportamiento 
