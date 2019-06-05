@@ -17,7 +17,8 @@ necesarias para poder realizar el registro de productos a nivel modelo
 > **Realizar el codigo de la vista con el boton de registro de productos
 Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial donde se registran productos
 **Estimado:** 4 puntos.  
-**Estado:** Finalizado.  
+**Estado:** Pendiente.  
+**Observacion:** Se sigue en el sprint siguiente por problemas de conocimientos de nuevas tecnologias. 
 **Encargado: Julian Bernal
 
 > **Presentar diseño de vista con boton de finalizar compro
@@ -61,11 +62,11 @@ nombre y precio, en las variables de items de la compra.
 **Para:** Almacenar nombre, codigo y valor del producto.
 **Encargado: David Dominguez.
 
-**Desarrollo de logica para el stock de los productos.
-**Como:** Desarrollador 
-**Quiero:** Generar logica de stock para poder controlar la cantidad de productos actuales
-**Para:** llevar un control en mi sistema de la variedad de productos y poder efectivizar compras en un futuro . 
-**Encargado: Bernal Julian 
+**Realizar el codigo de la vista con el boton de registro de productos
+Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial donde se registran productos
+**Estimado:** 4 puntos.  
+**Estado:** Pendiente.   
+**Encargado: Julian Bernal 
 
 **Desarrollo de Logica De la Persistencia de las Facturas
 **Como:** Desarrollador 
