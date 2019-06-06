@@ -52,7 +52,8 @@ Como desarrollador quiero agregar un campo stock en los productos tanto en model
 **Como:** Desarrollador 
 **Quiero:** Crear una boton de ingreso de producto
 **Para:** Poder que al activarlo sea posible internamente almacenar el código de producto y trabajar sobre él.
-**Estimado:** 2 puntos.  
+**Estimado:** 2 puntos. 
+**Estado:** Finalizado.
 **Encargado: David Dominguez.
 
 
@@ -62,7 +63,7 @@ nombre y precio, en las variables de items de la compra.
 **Quiero:** Generar logica operativa de la herramienta de ingresar producto
 **Para:** Almacenar nombre, codigo y valor del producto.
 **Estimado:** 2 puntos.  
-**Encargado: David Dominguez.
+**Encargado: David Dominguez / Julian Bernal.
 
 **Realizar el codigo de la vista con el boton de registro de productos
 Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial donde se registran productos
