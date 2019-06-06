@@ -10,15 +10,24 @@ public class CajaService {
     private ProductoDAO dao;
     private Caja caja;
 
+    
 
     public CajaService (Caja caja) {
         this.caja = caja;
-        this.dao = new JDBCProductoDAO();
+        this.setDao(new JDBCProductoDAO());
     }
 
     public Producto registrarProducto (int codigo) {
-        Producto producto = this.dao.recuperar(codigo);
+        Producto producto = this.getDao().recuperar(codigo);
         caja.addProducto(producto);
         return producto;
     }
+
+	public ProductoDAO getDao() {
+		return dao;
+	}
+
+	public void setDao(ProductoDAO dao) {
+		this.dao = dao;
+	}
 }
