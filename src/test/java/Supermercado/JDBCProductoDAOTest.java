@@ -18,7 +18,6 @@ private JDBCProductoDAO dao = new JDBCProductoDAO();
 
 	@After
 	public void clear(){
-
 	}
 
 	@Test

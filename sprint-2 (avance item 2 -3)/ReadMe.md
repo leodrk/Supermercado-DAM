@@ -76,7 +76,7 @@ Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial don
 **Quiero:** Generar la persistencia en la base de datos de las facturas
 **Para:** saber la recaudacion total. 
 **Estimado:** 4 puntos.  
-**Estado:** Pendiente.  
+**Estado:** Finalizado.  
 **Encargado: Eric Arnez
 
 ## Retrospectiva del sprint

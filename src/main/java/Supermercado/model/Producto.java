@@ -13,6 +13,11 @@ public class Producto  {
         setPrecio(unPrecio);
         setNombre(unNombre);
     }
+    public Producto (int unCodigo, String unNombre, double unPrecio){
+        setCodigo(unCodigo);
+        setPrecio(unPrecio);
+        setNombre(unNombre);
+    }
 
     public Producto (int unCodigo, String unNombre, int unPrecio){
         setCodigo(unCodigo);
