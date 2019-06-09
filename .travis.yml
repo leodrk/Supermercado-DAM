@@ -8,8 +8,8 @@ before_install:
   - sudo mysql_upgrade -u root -p root
   - sudo service mysql restart
   - mysql -e 'CCREATE TABLE Facturas (codigo int NOT NULL UNIQUE,
-											 dineroObtenido float NOT NULL,
-	                     fechaDeEmision DATE);'
+				 		dineroObtenido float NOT NULL,
+	                     			fechaDeEmision DATE);'
 
   - mysql -e  'CREATE SCHEMA supermercado;'
   - mysql -e 'USE supermercado;'
