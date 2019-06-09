@@ -8,4 +8,4 @@ before_install:
     ;GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;
     ;CREATE SCHEMA supermercado;
     ;USE supermercado;
-    ;CREATE TABLE supermercado.Productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);"
+    ;CREATE TABLE productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);"
