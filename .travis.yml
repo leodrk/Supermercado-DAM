@@ -4,9 +4,9 @@ services:
   - mysql
   
 before_install:
-  - mysql -e "use mysql; update user set authentication_string=PASSWORD('root') where user='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
-    ;GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;"
-    ;CREATE SCHEMA supermercado;'
-    ;USE supermercado;'
-    ;CREATE TABLE supermercado.Productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);'
+  - mysql -e "use mysql; update user set authentication_string=PASSWORD('root') where user='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;
+    ;GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;
+    ;CREATE SCHEMA supermercado;
+    ;USE supermercado;
+    ;CREATE TABLE supermercado.Productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);
     ;"
