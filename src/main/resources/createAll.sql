@@ -5,6 +5,9 @@ CREATE SCHEMA supermercado;
 
 USE supermercado;
 
+CREATE TABLE Facturas (codigo int NOT NULL UNIQUE,
+											 dineroObtenido float NOT NULL,
+	                     fechaDeEmision DATE);
 
 CREATE TABLE Productos (codigo int NOT NULL UNIQUE,
 						nombre VARCHAR (255) NOT NULL,
