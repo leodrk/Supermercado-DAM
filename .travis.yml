@@ -8,10 +8,7 @@ before_install:
   - mysql -u root -e "GRANT ALL ON *.* TO 'root'@'localhost';"
   - mysql -e  'CREATE SCHEMA supermercado;'
   - mysql -e 'USE supermercado;'
-
-
   - mysql -e 'CREATE TABLE Productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);'
-
   - mysql -e       
         'INSERT INTO Productos (codigo, nombre, precio)
         VALUES
