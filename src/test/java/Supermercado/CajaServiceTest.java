@@ -34,5 +34,13 @@ public class CajaServiceTest {
         assertTrue(caja.getCosteTotalActual() == 50);
         assertTrue(caja.getProductosACobrar().size() == 1);
     }
+    
+    @Test
+    public void testInutil () {
+    	JDBCProductoDAO d = new JDBCProductoDAO();
+    	this.service.setDao(d);
+    	this.service.registrarProducto(1102);
+    	assertTrue(caja.getProductosACobrar().size() == 1);
+    }
 
 }
