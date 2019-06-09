@@ -4,13 +4,14 @@ services:
   - mysql
   
 before_install:
-  - mysql -u root -e 'GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;'
-  - mysql -u root -e ' FLUSH PRIVILEGES;'
-  - mysql -e 'CREATE SCHEMA supermercado;'
-  - mysql -e 'USE supermercado;'
-  - mysql -e 'CREATE TABLE supermercado.Productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);'
+  - mysql -e "use mysql; update user set authentication_string=PASSWORD('root') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - mysql -u root -e "GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;"
+  - mysql -u root -e "FLUSH PRIVILEGES;"
+  - mysql -e "CREATE SCHEMA supermercado;"
+  - mysql -e "USE supermercado;"
+  - mysql -e "CREATE TABLE supermercado.Productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL);"
   - mysql -e       
-        'INSERT INTO supermercado.Productos (codigo, nombre, precio)
+        "INSERT INTO supermercado.Productos (codigo, nombre, precio)
         VALUES
     		(1103,"Leche", 30),
     		(1104,"Pan lactal", 90),
@@ -30,4 +31,4 @@ before_install:
     		(4418, "Alcohol Etilico", 300),
     		(4416, "Cepillo de dientes", 100),
     		(4417, "Hisopos", 210),
-    		(4420, "Papel higienico", 400);'
+    		(4420, "Papel higienico", 400);"
