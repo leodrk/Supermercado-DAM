@@ -96,7 +96,7 @@ public class JDBCProductoDAO implements ProductoDAO {
             //La url de conexion no deberia estar harcodeada aca
 			//return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root");
         } catch (SQLException e) {
             throw new RuntimeException("No se puede establecer una conexion", e);
         }
