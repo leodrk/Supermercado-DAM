@@ -52,7 +52,20 @@ Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial don
 
 **Totalizacion de la venta (suma de acuerdo a precio y numero de item's)
 
-**
+**EPICA
+**Como cajero
+  Quiero registrar productos 
+  Para agregarlos a la venta actual y ver el precio total de la compra
+  
+**Desarrollar vista de caja
+**Estimado: 6 puntos.
+**Estado: Pendiente.
+**Encargado:
+
+**Enlazar modelo con vista
+**Estimado 8 puntos.
+**Estado: Pendiente.
+**Encargado:
 
 
 ## Retrospectiva del sprint
@@ -66,5 +79,3 @@ Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial don
 
 > ** Todavia presentamos problemas con respecto al desarrollo de la vista y su relación con el modelo dado.
 > ** Se desperdicio mucho tiempo en solucionar algunos problemas de configuracion con respecto a la integración continua.
-
-
