@@ -1,4 +1,4 @@
-https://raw.githubusercontent.com/leodrk/Supermercado-DAME/master/sprint-3/Grafico.png
+![Grafico](https://user-images.githubusercontent.com/42979506/59323274-74030b00-8cb0-11e9-8bf4-bf6d714c9ae5.png) 
 
 # **Backlog del Producto**
 
