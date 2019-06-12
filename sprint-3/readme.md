@@ -50,6 +50,9 @@ Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial don
 
 ## Estimado para proxima iteracion 4
 
+**Totalizacion de la venta (suma de acuerdo a precio y numero de item's)
+
+**
 
 
 ## Retrospectiva del sprint
