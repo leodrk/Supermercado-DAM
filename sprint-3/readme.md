@@ -11,7 +11,7 @@
 **Modificar base de datos/modelo para que cada producto contenga un campo stock
 Como desarrollador quiero agregar un campo stock en los productos tanto en modelo como en base de datos
 **Estimado:** 3 puntos.  
-**Estado:** Pendiente.  
+**Estado:** Finalizado.  
 **Encargado: Leonel Martos.
 
 
