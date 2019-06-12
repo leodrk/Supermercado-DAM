@@ -56,12 +56,12 @@ Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial don
 
 # High
 
-> ** La division de tareas fue mas organizada y equitativa para el grupo . 
-> ** Se implemento el grafico de velocidad correctamente
+> ** La division de tareas fue mas organizada y equitativa para el grupo. 
+> ** Se implemento el grafico de velocidad correctamente.
 
 # Low
 
-> ** Falta adquirir conocimiento con respecto a las tecnologias referentes a la interfaz grafica e integracion continua .
-> ** Errores de comunicacion y malentendimientos llevaron a una mala division del tiempo dado para realizar los stories correspondientes al sprint
+> ** Todavia presentamos problemas con respecto al desarrollo de la vista y su relación con el modelo dado.
+> ** Se desperdicio mucho tiempo en solucionar algunos problemas de configuracion con respecto a la integración continua.
 
 
