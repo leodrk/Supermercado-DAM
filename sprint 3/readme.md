@@ -32,7 +32,7 @@ nombre y precio, en las variables de items de la compra.
 **Realizar el codigo de la vista con el boton de registro de productos
 Como Desarollador quiero desarrollar el codigo que dibuja la ventana inicial donde se registran productos
 **Estimado:** 4 puntos.  
-**Estado:** Pendiente.   
+**Estado:** Finalizado.   
 **Encargado: Julian Bernal 
 
 **Desarrollo de Logica De la Persistencia de las Facturas
