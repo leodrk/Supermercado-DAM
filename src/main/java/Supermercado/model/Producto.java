@@ -25,6 +25,11 @@ public class Producto  {
         setNombre(unNombre);
     }
 
+    @Override
+    public String toString() {
+        return (this.nombre + ": " + Double.toString(this.precio));
+    }
+
     private void setCodigo(int unCodigo){
         this.codigo = unCodigo;
     }
