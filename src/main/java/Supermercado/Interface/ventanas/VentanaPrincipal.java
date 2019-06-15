@@ -118,7 +118,7 @@ class Marco extends JFrame {
 
     public Marco() {
         setTitle("Supermercado-Dame");
-        setSize(800, 600);
+        setSize(600, 400);
 
     }
 
