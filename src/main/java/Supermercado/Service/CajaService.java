@@ -1,5 +1,6 @@
 package Supermercado.Service;
 
+import Supermercado.Interface.ventanas.paneles.ProductListPanel;
 import Supermercado.dao.ProductoDAO;
 import Supermercado.dao.JDBC.JDBCProductoDAO;
 import Supermercado.model.Caja;
@@ -21,6 +22,10 @@ public class CajaService {
         Producto producto = this.getDao().recuperar(codigo);
         caja.addProducto(producto);
         return producto;
+    }
+
+    public Producto getProducto (int codigo){
+        return this.dao.recuperar(codigo);
     }
 
 	public ProductoDAO getDao() {
