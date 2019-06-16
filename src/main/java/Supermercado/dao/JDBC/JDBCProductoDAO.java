@@ -17,10 +17,11 @@ public class JDBCProductoDAO implements ProductoDAO {
 
     public void guardar(Producto producto) {
         this.executeWithConnection(conn -> {
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO productos (codigo, nombre, precio) VALUES (?,?,?)");
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO productos (codigo, nombre, precio, cantidad) VALUES (?,?,?,?)");
             ps.setInt(1, producto.getCodigo());
             ps.setString(2, producto.getNombre());
 			ps.setDouble(3, producto.getPrecio());
+			ps.setDouble(4, producto.getCantidad());
             ps.execute();
 
             if (ps.getUpdateCount() != 1) {
@@ -94,9 +95,9 @@ public class JDBCProductoDAO implements ProductoDAO {
     private Connection openConnection() {
         try {
             //La url de conexion no deberia estar harcodeada aca
-			//return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false");
 
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false");
+            //return DriverManager.getConnection("jdbc:mysql://localhost:3306/supermercado?user=root&password=root&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false");
         } catch (SQLException e) {
             throw new RuntimeException("No se puede establecer una conexion", e);
         }

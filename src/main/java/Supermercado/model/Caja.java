@@ -11,7 +11,12 @@ public class Caja {
     private double costeTotalActual = 0.0d;
 
     public void addProducto(Producto producto) {
-        productosACobrar.add(producto);
+        if (this.productosACobrar.stream().anyMatch( p -> producto.getCodigo() == p.getCodigo() )) {
+        	this.getProducto(producto).agregarProducto();
+        }
+        else {
+        	this.productosACobrar.add(producto);
+        }
         costeTotalActual += producto.getPrecio();
     }
 
@@ -43,5 +48,15 @@ public class Caja {
         else{
             throw new DineroInsuficienteException(costeTotalActual - dinero);
         }
+    }
+
+    //Precondicion: asume que el producto dado esta en la lista de productos a cobrar
+    public Producto getProducto (Producto producto) {
+    	for (int i = 0; i<= this.productosACobrar.size(); i++) {
+    		if (this.productosACobrar.get(i).getCodigo() == producto.getCodigo()) {
+    			return this.productosACobrar.get(i);
+    		}
+    	}
+		return null;
     }
 }
