@@ -6,13 +6,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import Supermercado.Service.CajaService;
-import Supermercado.dao.JDBC.JDBCProductoDAO;
 import Supermercado.model.Caja;
 import Supermercado.model.Producto;
-import static org.mockito.Mockito.*;
 
 public class CajaServiceTest {
-
 
     private CajaService service;
     private Caja caja;
@@ -21,10 +18,6 @@ public class CajaServiceTest {
     public void setUp() {
         this.caja = new Caja();
         this.service = new CajaService(caja);
-        JDBCProductoDAO dao = mock(JDBCProductoDAO.class);
-        this.service.setDao(dao);
-        Producto jugo = new Producto (1101, "Jugo", 50);
-        when(dao.recuperar(1101)).thenReturn(jugo);
     }
 
     @Test
@@ -34,5 +27,4 @@ public class CajaServiceTest {
         assertTrue(caja.getCosteTotalActual() == 50);
         assertTrue(caja.getProductosACobrar().size() == 1);
     }
-
 }

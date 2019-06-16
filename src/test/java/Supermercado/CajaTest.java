@@ -23,8 +23,8 @@ public class CajaTest {
     @Before
     public void setUP(){
         caja = new Caja();
-        producto1 = new Producto("Manaos", 50.5);
-        producto2 = new Producto("Pitusas", 40.5);
+        producto1 = new Producto(10,"Manaos", 50.5);
+        producto2 = new Producto(12, "Pitusas", 40.5);
         caja.addProducto(producto1);
         caja.addProducto(producto2);
     }
