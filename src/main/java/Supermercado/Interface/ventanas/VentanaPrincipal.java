@@ -23,7 +23,6 @@ public class VentanaPrincipal {
 
     public static void main (String [] args) {
         ProductListPanel tablaProductos = new ProductListPanel();
-        
         JPanel panel = new JPanel(); // Creamos el panel
         panel.setLayout(null);
         JButton botonRegistrar = new JButton("Registrar");
@@ -45,17 +44,17 @@ public class VentanaPrincipal {
         JLabel labelCodigo = new JLabel("Ingrese Codigo");
 
         JTextField cajaDeTexto = new JTextField();
-        cajaDeTexto.setEditable(false);
-        
+        cajaDeTexto.setEditable(false);   
         JTextField totalVenta = new JTextField();
         totalVenta.setEditable(false);
-        
+
         Marco marco = new Marco();
         marco.setVisible(true);
         panel.setBackground(Color.gray);
         marco.add(panel);
         cajaDeTexto.requestFocusInWindow();
         botonRegistrar.setBounds(230 , 175, 100 ,40);
+
         num1.setBounds(50 , 30 , 45,45);
         num2.setBounds(103 , 30 , 45,45);
         num3.setBounds(155 , 30 , 45,45);
@@ -124,21 +123,17 @@ public class VentanaPrincipal {
         cajaDeTexto.requestFocusInWindow();
         marco.getRootPane().setDefaultButton(botonRegistrar);
         marco.setResizable(false);
+
     }
 
 
 }
-
-
 
 class Marco extends JFrame {
 
     public Marco() {
         setTitle("Supermercado-Dame");
         setSize(550, 370);
-
     }
-
-
 }
 
