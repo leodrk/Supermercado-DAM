@@ -20,7 +20,9 @@ public class CajaService {
 
     public Producto registrarProducto (int codigo) {
         Producto producto = this.getDao().recuperar(codigo);
+        if (producto != null) {
         caja.addProducto(producto);
+        }
         return producto;
     }
 
@@ -34,5 +36,9 @@ public class CajaService {
 
 	public void setDao(ProductoDAO dao) {
 		this.dao = dao;
+	}
+
+	public double getTotalVentaActual() {
+		return this.caja.getCosteTotalActual();
 	}
 }

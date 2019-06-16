@@ -9,6 +9,8 @@ import Supermercado.model.Producto;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
@@ -20,11 +22,10 @@ public class VentanaPrincipal {
 
 
     public static void main (String [] args) {
-        ProductListPanel pl = new ProductListPanel();
-
+        ProductListPanel tablaProductos = new ProductListPanel();
         JPanel panel = new JPanel(); // Creamos el panel
         panel.setLayout(null);
-        JButton boton1 = new JButton("Registrar");
+        JButton botonRegistrar = new JButton("Registrar");
         JButton num1 = new JButton("1");
         JButton num2 = new JButton("2");
         JButton num3 = new JButton("3");
@@ -35,25 +36,25 @@ public class VentanaPrincipal {
         JButton num8 = new JButton("8");
         JButton num9 = new JButton("9");
         JButton num0 = new JButton("0");
-        JButton punto = new JButton(".");
+        Label labelAlerta = new Label();
+        labelAlerta.setText("Producto Incorrecto");
+        labelAlerta.setVisible(false);
+        labelAlerta.setForeground(Color.red);
 
         JLabel labelCodigo = new JLabel("Ingrese Codigo");
 
         JTextField cajaDeTexto = new JTextField();
-
-        JTextField cajaDeTexto1 = new JTextField("INGRESE PRECIO");
-
-        //CREO Tabla
-        String [] nombresColumnas = {"Producto" , "Precio"};
-        String [] datosFilas = {"Coca" , "15.00"};
-        //JTable tabla = new JTable();
+        cajaDeTexto.setEditable(false);   
+        JTextField totalVenta = new JTextField();
+        totalVenta.setEditable(false);
 
         Marco marco = new Marco();
         marco.setVisible(true);
         panel.setBackground(Color.gray);
         marco.add(panel);
         cajaDeTexto.requestFocusInWindow();
-        boton1.setBounds(230 , 175, 100 ,40);
+        botonRegistrar.setBounds(230 , 175, 100 ,40);
+
         num1.setBounds(50 , 30 , 45,45);
         num2.setBounds(103 , 30 , 45,45);
         num3.setBounds(155 , 30 , 45,45);
@@ -62,66 +63,77 @@ public class VentanaPrincipal {
         num6.setBounds(155 , 80 , 45,45);
         num7.setBounds(50 , 130 , 45,45);
         num8.setBounds(103 , 130 , 45,45);
-        num9.setBounds(155 , 130 , 45,45);
-        num0.setBounds(50,180,100,45);
-        punto.setBounds(155 , 180 , 45,45);
+        num9.setBounds(155 , 130 , 45 ,45);
+        num0.setBounds(103,180,45,45);
+        labelAlerta.setBounds(230,70,130, 45);
+        ArrayList <JButton> listaBotones = new ArrayList <>();
+        listaBotones.add(num0);
+        listaBotones.add(num1);
+        listaBotones.add(num2);
+        listaBotones.add(num3);
+        listaBotones.add(num4);
+        listaBotones.add(num5);
+        listaBotones.add(num6);
+        listaBotones.add(num7);
+        listaBotones.add(num8);
+        listaBotones.add(num9);
         labelCodigo.setBounds(230,5,115,40);
         cajaDeTexto.setBounds(230,35,115 ,40);
-        cajaDeTexto1.setBounds(230,80,115 ,40);
-        pl.getPanel().setBounds(360, 30, 150,250);
+        totalVenta.setBounds(360,290,150,35);
+        tablaProductos.getPanel().setBounds(360, 30, 150,250);
 
         CajaService cajaService = new CajaService(new Caja());
 
-        boton1.addActionListener(new ActionListener(){
+        botonRegistrar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
-                String textFieldValue = cajaDeTexto.getText();
-
-                Producto p = cajaService.getProducto(Integer.parseInt(textFieldValue));
-
-                pl.añadirProducto(p);
-                cajaDeTexto.setText("");
+	                String textFieldValue = cajaDeTexto.getText();
+	                if (!textFieldValue.equals("")) {
+	                Producto p = cajaService.registrarProducto(Integer.parseInt(textFieldValue));
+	                if (p == null) {
+	                	labelAlerta.setVisible(true);
+	                }
+	                else
+	                {	
+	                	totalVenta.setText("Total: " + cajaService.getTotalVentaActual());
+	                	 tablaProductos.añadirProducto(p);
+	                }
+	                cajaDeTexto.setText("");
+                }
             }}
             );
+        
+        listaBotones.forEach(boton -> boton.addActionListener(new ActionListener()
+        {
+        	public void actionPerformed (ActionEvent ae) {
+        		cajaDeTexto.setText(cajaDeTexto.getText() + boton.getText());
+        		labelAlerta.setVisible(false);
+        	}	
+        }));
 
-        panel.add(boton1);
-        panel.add(num0);
-        panel.add(num1);
-        panel.add(num2);
-        panel.add(num3);
-        panel.add(num4);
-        panel.add(num5);
-        panel.add(num6);
-        panel.add(num7);
-        panel.add(num8);
-        panel.add(num9);
-        panel.add(punto);
+        listaBotones.forEach(boton -> panel.add(boton));
+        panel.add(botonRegistrar);
         panel.add(labelCodigo);
         panel.add(cajaDeTexto);
-       // panel.add(cajaDeTexto1);
-        panel.add(pl.getPanel());
-
-
-
-
+        panel.add(tablaProductos.getPanel());
+        panel.add(labelAlerta);
+        panel.add(totalVenta);
+        
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         cajaDeTexto.requestFocusInWindow();
-        marco.getRootPane().setDefaultButton(boton1);
+        marco.getRootPane().setDefaultButton(botonRegistrar);
+        marco.setResizable(false);
+
     }
 
 
 }
 
-
-
 class Marco extends JFrame {
 
     public Marco() {
         setTitle("Supermercado-Dame");
-        setSize(600, 400);
-
+        setSize(550, 370);
     }
-
-
 }
 
