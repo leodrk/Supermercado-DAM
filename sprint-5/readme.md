@@ -4,11 +4,11 @@
 
 # Iteracion 4
 
-#Mejora visual de vista actual
-#Encargado: David Dominguez
+*Mejora visual de vista actual
+*Encargado: David Dominguez
 
-#Agregado catálogo para usuario final con productos y precios.
-#Encargado: David Dominguez
+*Agregado catálogo para usuario final con productos y precios.
+*Encargado: David Dominguez
 
 
 
