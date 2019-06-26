@@ -71,6 +71,20 @@ ________________________________________________________________________________
 ## Estimado para proxima iteracion
 
 **Crear e implementar usuarios y contraseñas para el acceso a la ventana de administador y de vendedor respectivamente.
+
+------
+
+EPICA
+
+**Como** Cajero.
+**Quiero** Finalizar compra
+**Para** visualizar Factura de venta actual y poder continuar con la siguiente venta
+
+Tareas:
+
+**Crear botón de finalizar compra en vista
+**Hacer comportamiento de dicho botón para que borre el listado de la venta actual y abra la ventana de factura
+**Crear ventana con datos de factura de venta actual
 ____________________________________________________________________________________________________________________________________
 
 ## Retrospectiva del sprint
