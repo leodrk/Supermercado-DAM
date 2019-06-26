@@ -71,9 +71,13 @@ ________________________________________________________________________________
 > **crear ventana login
 
 **Como** usuario.
-**Quiero** una ventana para poder ingresar al sistema
+
+**Quiero** una ventana para poder ingresar al sistema.
+
 **Estimado: 3 puntos.
+
 **Estado: Realizado.
+
 **Encargado: Eric Arnez
 ____________________________________________________________________________________________________________________________________
 
