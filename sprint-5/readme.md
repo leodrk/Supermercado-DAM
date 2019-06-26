@@ -82,9 +82,9 @@ EPICA
 
 Tareas:
 
-**Crear botón de finalizar compra en vista
-**Hacer comportamiento de dicho botón para que borre el listado de la venta actual y abra la ventana de factura
-**Crear ventana con datos de factura de venta actual
+**Crear botón de finalizar compra en vista - 2 puntos.
+**Hacer comportamiento de dicho botón para que borre el listado de la venta actual y abra la ventana de factura - 4 puntos.
+**Crear ventana con datos de factura de venta actual - 4 puntos.
 ____________________________________________________________________________________________________________________________________
 
 ## Retrospectiva del sprint
