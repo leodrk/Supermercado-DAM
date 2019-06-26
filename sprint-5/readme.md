@@ -68,6 +68,14 @@ ________________________________________________________________________________
 ![Grafico](https://github.com/davidd0minguez/Supermercado-DAME/blob/master/Sprint%20-5/admin.PNG)
 ____________________________________________________________________________________________________________________________________
 
+> **crear ventana login
+**Como** usuario.
+**Quiero** una ventana para poder ingresar al sistema
+**Estimado: 3 puntos.
+**Estado: Realizado.
+**Encargado: Eric Arnez
+____________________________________________________________________________________________________________________________________
+
 ## Estimado para proxima iteracion
 
 **Crear e implementar usuarios y contraseñas para el acceso a la ventana de administador y de vendedor respectivamente.
