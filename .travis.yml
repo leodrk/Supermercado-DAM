@@ -9,8 +9,6 @@ before_install:
     ;CREATE SCHEMA supermercado;
     ;USE supermercado;
     ;CREATE TABLE productos (codigo int NOT NULL UNIQUE, nombre VARCHAR (255) NOT NULL, precio float NOT NULL, cantidad float NOT NULL);
-    CREATE TABLE usuarios (nombre VARCHAR (255) NOT NULL UNIQUE, password VARCHAR (255) NOT NULL);
-    INSERT INTO usuarios (nombre, password) VALUES ("asd","123");
     CREATE TABLE facturas (codigo int NOT NULL UNIQUE, dineroObtenido float NOT NULL, fechaDeEmision DATE);
     INSERT INTO productos (codigo, nombre, precio, cantidad)	VALUES
     		(1103,'Leche', 30, 1),
