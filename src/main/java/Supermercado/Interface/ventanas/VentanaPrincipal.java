@@ -44,7 +44,7 @@ public class VentanaPrincipal {
         JLabel labelCodigo = new JLabel("Ingrese Codigo");
 
         JTextField cajaDeTexto = new JTextField();
-        cajaDeTexto.setEditable(false);   
+        cajaDeTexto.setEditable(false);
         JTextField totalVenta = new JTextField();
         totalVenta.setEditable(false);
 
@@ -86,28 +86,28 @@ public class VentanaPrincipal {
 
         botonRegistrar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
-	                String textFieldValue = cajaDeTexto.getText();
-	                if (!textFieldValue.equals("")) {
-	                Producto p = cajaService.registrarProducto(Integer.parseInt(textFieldValue));
-	                if (p == null) {
-	                	labelAlerta.setVisible(true);
-	                }
-	                else
-	                {	
-	                	totalVenta.setText("Total: " + cajaService.getTotalVentaActual());
-	                	 tablaProductos.añadirProducto(p);
-	                }
-	                cajaDeTexto.setText("");
+                String textFieldValue = cajaDeTexto.getText();
+                if (!textFieldValue.equals("")) {
+                    Producto p = cajaService.registrarProducto(Integer.parseInt(textFieldValue));
+                    if (p == null) {
+                        labelAlerta.setVisible(true);
+                    }
+                    else
+                    {
+                        totalVenta.setText("Total: " + cajaService.getTotalVentaActual());
+                        tablaProductos.añadirProducto(p);
+                    }
+                    cajaDeTexto.setText("");
                 }
             }}
-            );
-        
+        );
+
         listaBotones.forEach(boton -> boton.addActionListener(new ActionListener()
         {
-        	public void actionPerformed (ActionEvent ae) {
-        		cajaDeTexto.setText(cajaDeTexto.getText() + boton.getText());
-        		labelAlerta.setVisible(false);
-        	}	
+            public void actionPerformed (ActionEvent ae) {
+                cajaDeTexto.setText(cajaDeTexto.getText() + boton.getText());
+                labelAlerta.setVisible(false);
+            }
         }));
 
         listaBotones.forEach(boton -> panel.add(boton));
@@ -117,12 +117,13 @@ public class VentanaPrincipal {
         panel.add(tablaProductos.getPanel());
         panel.add(labelAlerta);
         panel.add(totalVenta);
-        
+
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         cajaDeTexto.requestFocusInWindow();
         marco.getRootPane().setDefaultButton(botonRegistrar);
         marco.setResizable(false);
+        marco.setTitle("Supermercado " + args[0]);
 
     }
 
