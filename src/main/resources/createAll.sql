@@ -9,6 +9,12 @@ CREATE TABLE Facturas (codigo int NOT NULL UNIQUE,
 											 dineroObtenido float NOT NULL,
 	                     fechaDeEmision DATE);
 
+CREATE TABLE Usuarios (nombre VARCHAR (255) NOT NULL UNIQUE,
+										   password VARCHAR (255) NOT NULL);
+			 INSERT INTO Usuarios (nombre, password)
+			 VALUES
+			("asd","123");
+
 CREATE TABLE Productos (codigo int NOT NULL UNIQUE,
 						nombre VARCHAR (255) NOT NULL,
 						precio float NOT NULL,

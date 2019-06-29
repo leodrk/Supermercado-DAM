@@ -123,6 +123,7 @@ public class VentanaPrincipal {
         cajaDeTexto.requestFocusInWindow();
         marco.getRootPane().setDefaultButton(botonRegistrar);
         marco.setResizable(false);
+        marco.setTitle("Supermercado " + args[0]);
 
     }
 

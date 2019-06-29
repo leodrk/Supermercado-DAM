@@ -6,8 +6,6 @@ public interface ProductoDAO {
 
     public void guardar(Producto producto);
 
-    //public Producto recuperar(String nombreProducto);
-
     public void borrarProducto(Producto producto);
 
     public void actualizarProducto();
