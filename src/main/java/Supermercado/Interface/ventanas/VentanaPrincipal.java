@@ -146,7 +146,6 @@ public class VentanaPrincipal {
         marco.getRootPane().setDefaultButton(botonRegistrar);
         marco.setResizable(false);
         marco.setTitle("Supermercado DAME - cajero: " + args[0]);
-
     }
 
 
