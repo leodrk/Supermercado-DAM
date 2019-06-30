@@ -32,6 +32,11 @@ public class ProductListPanel extends JPanel {
     public void añadirProducto(Producto p){
         this.productos.addElement(p);
     }
+    
+    public void borrarTabla() {
+    	this.productos = new DefaultListModel<Producto>();
+    	this.panel = new JPanel();
+    }
 
     public JPanel getPanel() {
         return panel;

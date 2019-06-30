@@ -1,6 +1,4 @@
 package Supermercado.Service;
-
-import Supermercado.Interface.ventanas.paneles.ProductListPanel;
 import Supermercado.dao.ProductoDAO;
 import Supermercado.dao.JDBC.JDBCProductoDAO;
 import Supermercado.model.Caja;
@@ -10,18 +8,29 @@ public class CajaService {
 
     private ProductoDAO dao;
     private Caja caja;
+    private String cajero;
 
     
 
     public CajaService (Caja caja) {
-        this.caja = caja;
+        this.setCaja(caja);
         this.setDao(new JDBCProductoDAO());
     }
 
-    public Producto registrarProducto (int codigo) {
+    public CajaService(Caja caja, String cajero) {
+    	this.setCaja(caja);
+    	this.setCajero(cajero);
+    	this.setDao(new JDBCProductoDAO());
+    }
+    
+    public void setCajero(String cajero) {
+    	this.cajero = cajero;
+    }
+
+	public Producto registrarProducto (int codigo) {
         Producto producto = this.getDao().recuperar(codigo);
         if (producto != null) {
-        caja.addProducto(producto);
+        getCaja().addProducto(producto);
         }
         return producto;
     }
@@ -39,6 +48,18 @@ public class CajaService {
 	}
 
 	public double getTotalVentaActual() {
-		return this.caja.getCosteTotalActual();
+		return this.getCaja().getCosteTotalActual();
+	}
+
+	public Caja getCaja() {
+		return caja;
+	}
+
+	public void setCaja(Caja caja) {
+		this.caja = caja;
+	}
+
+	public String getCajero() {
+		return cajero;
 	}
 }

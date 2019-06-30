@@ -7,10 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
-import javax.swing.Timer;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 public class VentanaLogin extends JFrame{
 
@@ -61,9 +57,7 @@ public class VentanaLogin extends JFrame{
                 String[] arguments = new String[]{usuarioIngresado};
 
                 if (service.comprobarUsuario(usuarioIngresado, passwordIngresado)) {
-
                     VentanaPrincipal.main(arguments);
-                    ventana.setVisible(false);
                     ventana.dispose();
                 } else {
                     usuarioOPasswordIncorrecto.setVisible(true);
@@ -79,5 +73,6 @@ public class VentanaLogin extends JFrame{
     public VentanaLogin(){
         setTitle("Supermercado-Dame LOGIN");
         setSize(550, 370);
+        setLocation(400, 150);
     }
 }
