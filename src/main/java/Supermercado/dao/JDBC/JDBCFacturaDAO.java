@@ -25,7 +25,7 @@ public class JDBCFacturaDAO implements FacturaDAO {
            ps.execute();
 
             if (ps.getUpdateCount() != 1) {
-                throw new RuntimeException("No se inserto la facutra con el codigo " + factura.getCodigo());
+                throw new RuntimeException("No se inserto la factura con el codigo " + factura.getCodigo());
             }
             ps.close();
 
@@ -88,6 +88,27 @@ public class JDBCFacturaDAO implements FacturaDAO {
             /*codigo, dineroObtenido, fechaDeEmision*/
             ps.close();
             return facturaRecuperada;
+        });
+    }
+    
+    @Override
+    public int getUltimoCodigo() {
+    	return this.executeWithConnection(conn -> {
+            PreparedStatement ps =
+                    conn.prepareStatement("SELECT * FROM facturas ORDER BY codigo DESC LIMIT 1");
+            ResultSet resultSet = ps.executeQuery();
+            Factura facturaRecuperada = null;
+            int res = 0;
+            while(resultSet.next()) {
+            	if(facturaRecuperada != null) {
+                    res = 0;
+            	}
+            	else {
+            		res = resultSet.getInt("codigo");
+            	}
+            }
+            ps.close();
+            return res;
         });
     }
 

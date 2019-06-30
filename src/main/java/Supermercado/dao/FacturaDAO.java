@@ -7,4 +7,5 @@ public interface FacturaDAO {
     void borrar (Factura factura);
     double getRecaudacionTotal();
     Factura recuperar(Factura factura);
+    int getUltimoCodigo();
 }

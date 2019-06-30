@@ -10,8 +10,8 @@ public class Factura {
     private double vuelto = 0.0d;
     private Date fechaDeEmision;
     private int codigo;
-
-
+    
+    
     public Factura(List<Producto> productos, double dinero) {
         productosAbonados = productos;
         dineroAbonado = dinero;
@@ -29,12 +29,14 @@ public class Factura {
     }
 
 
-    public Factura(List<Producto> productos) {
+    public Factura(int codigo, List<Producto> productos) {
+    	this.codigo = codigo;
 		productosAbonados = productos;
+		fechaDeEmision = new Date(new java.util.Date().getTime());
 	}
 
 	private double calcularVuelto() {
-        double precioTotal = productosAbonados.stream().mapToDouble(Producto::getPrecio).sum();
+        double precioTotal = productosAbonados.stream().mapToDouble(p -> p.getPrecio() * p.getCantidad()).sum();
         return dineroAbonado - precioTotal;
     }
 
