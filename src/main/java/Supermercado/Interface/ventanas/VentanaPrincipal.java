@@ -21,13 +21,23 @@ public class VentanaPrincipal {
 	
 	public static String getFactura(CajaService caja, String cajero) {
 		Factura factura = caja.generarFactura();
-		String titulo = "Supermercado DAME - Cajero: " + cajero + "<br/>";
+		String agradecimiento = "Gracias por su compra! <br/>";
+		String titulo = "Factura Supermercado DAME <br/> -Cajero: " + cajero + "<br/>";
 		String productos = "";
 		for (Producto p : factura.getProductosAbonados()) {
-			productos = productos + p.getNombre() + " " + p.getPrecio() + " x " + p.getCantidad() + "<br/>"; 
+			productos = productos + p.getNombre() + " $" + p.getPrecio() + " x " + p.getCantidad() + " unidades" + "<br/>"; 
 		}
-		String total = "Total venta: " + String.valueOf(caja.getTotalVentaActual());
-		return "<html>" + titulo + productos + total + "</html>";
+		String total = "Total venta: $" + String.valueOf(caja.getTotalVentaActual()) + "<br/>";
+		return "<html>" 
+				+ "------------------------------------------------- <br/>"
+				+ titulo
+				+ "------------------------------------------------- <br/>"
+				+ productos 
+				+ "<br/> <br/> <br/> <br/> <br/>"
+				+ total 
+				+ "------------------------------------------------- <br/>"
+				+ agradecimiento
+				+ "</html>";
 	}
 
 
