@@ -29,7 +29,11 @@ public class Factura {
     }
 
 
-    private double calcularVuelto() {
+    public Factura(List<Producto> productos) {
+		productosAbonados = productos;
+	}
+
+	private double calcularVuelto() {
         double precioTotal = productosAbonados.stream().mapToDouble(Producto::getPrecio).sum();
         return dineroAbonado - precioTotal;
     }

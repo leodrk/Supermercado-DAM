@@ -22,12 +22,6 @@ public class Producto  {
         setCantidad(1);
     }
 
-    public Producto (int unCodigo, String unNombre, int unPrecio){
-        setCodigo(unCodigo);
-        setPrecio(unPrecio);
-        setNombre(unNombre);
-    }
-
     @Override
     public String toString() {
         return (this.nombre + ": " + Double.toString(this.precio));

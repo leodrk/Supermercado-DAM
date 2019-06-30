@@ -3,12 +3,13 @@ package Supermercado.Interface.ventanas;
 
 import Supermercado.Interface.ventanas.paneles.ProductListPanel;
 import Supermercado.Service.CajaService;
+import Supermercado.Service.UsuarioService;
 import Supermercado.model.Caja;
+import Supermercado.model.Factura;
 import Supermercado.model.Producto;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -17,8 +18,17 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class VentanaPrincipal {
-
-
+	
+	public static String getFactura(CajaService caja, String cajero) {
+		Factura factura = caja.getCaja().generarFactura();
+		String titulo = "Supermercado DAME - Cajero: " + cajero + "<br/>";
+		String productos = "";
+		for (Producto p : factura.getProductosAbonados()) {
+			productos = productos + p.getNombre() + " " + p.getPrecio() + " x " + p.getCantidad() + "<br/>"; 
+		}
+		String total = "Total venta: " + String.valueOf(caja.getTotalVentaActual());
+		return "<html>" + titulo + productos + total + "</html>";
+	}
 
 
     public static void main (String [] args) {
@@ -36,6 +46,7 @@ public class VentanaPrincipal {
         JButton num8 = new JButton("8");
         JButton num9 = new JButton("9");
         JButton num0 = new JButton("0");
+        JButton finCompra = new JButton("Finalizar");
         Label labelAlerta = new Label();
         labelAlerta.setText("Producto Incorrecto");
         labelAlerta.setVisible(false);
@@ -66,6 +77,7 @@ public class VentanaPrincipal {
         num9.setBounds(155 , 130 , 45 ,45);
         num0.setBounds(103,180,45,45);
         labelAlerta.setBounds(230,70,130, 45);
+        finCompra.setBounds(230, 220, 100, 40);
         ArrayList <JButton> listaBotones = new ArrayList <>();
         listaBotones.add(num0);
         listaBotones.add(num1);
@@ -81,8 +93,8 @@ public class VentanaPrincipal {
         cajaDeTexto.setBounds(230,35,115 ,40);
         totalVenta.setBounds(360,290,150,35);
         tablaProductos.getPanel().setBounds(360, 30, 150,250);
-
-        CajaService cajaService = new CajaService(new Caja());
+        
+        CajaService cajaService = new CajaService(new Caja(), args[0]);
 
         botonRegistrar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
@@ -109,9 +121,19 @@ public class VentanaPrincipal {
                 labelAlerta.setVisible(false);
             }
         }));
+        
+        finCompra.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                String[] arguments = new String[]{VentanaPrincipal.getFactura(cajaService, args[0]), cajaService.getCajero()
+                };
+                marco.dispose();
+                VentanaFactura.main(arguments);
+            }    
+        });
 
         listaBotones.forEach(boton -> panel.add(boton));
         panel.add(botonRegistrar);
+        panel.add(finCompra);
         panel.add(labelCodigo);
         panel.add(cajaDeTexto);
         panel.add(tablaProductos.getPanel());
@@ -123,7 +145,7 @@ public class VentanaPrincipal {
         cajaDeTexto.requestFocusInWindow();
         marco.getRootPane().setDefaultButton(botonRegistrar);
         marco.setResizable(false);
-        marco.setTitle("Supermercado " + args[0]);
+        marco.setTitle("Supermercado DAME - cajero: " + args[0]);
 
     }
 
@@ -135,6 +157,7 @@ class Marco extends JFrame {
     public Marco() {
         setTitle("Supermercado-Dame");
         setSize(550, 370);
+        setLocation(400, 150);
     }
 }
 

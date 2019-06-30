@@ -40,6 +40,10 @@ public class Caja {
         productosACobrar = new ArrayList<>();
         costeTotalActual = 0.0d;
     }
+    
+    public Factura generarFactura() {
+    	return new Factura(productosACobrar);
+    }
 
     public Factura abonarCompra(double dinero) {
         if (costeTotalActual <= dinero){
