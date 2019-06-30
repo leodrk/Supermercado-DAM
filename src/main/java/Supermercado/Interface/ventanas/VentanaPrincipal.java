@@ -20,7 +20,7 @@ import java.awt.event.*;
 public class VentanaPrincipal {
 	
 	public static String getFactura(CajaService caja, String cajero) {
-		Factura factura = caja.getCaja().generarFactura();
+		Factura factura = caja.generarFactura();
 		String titulo = "Supermercado DAME - Cajero: " + cajero + "<br/>";
 		String productos = "";
 		for (Producto p : factura.getProductosAbonados()) {

@@ -9,7 +9,7 @@ public class Caja {
 
     private List<Producto> productosACobrar = new ArrayList<>();
     private double costeTotalActual = 0.0d;
-
+    
     public void addProducto(Producto producto) {
         if (this.productosACobrar.stream().anyMatch( p -> producto.getCodigo() == p.getCodigo() )) {
         	this.getProducto(producto).agregarProducto();
@@ -41,8 +41,8 @@ public class Caja {
         costeTotalActual = 0.0d;
     }
     
-    public Factura generarFactura() {
-    	return new Factura(productosACobrar);
+    public Factura generarFactura(int codigo) {
+    	return new Factura(codigo, productosACobrar, this.costeTotalActual);
     }
 
     public Factura abonarCompra(double dinero) {
