@@ -12,11 +12,11 @@
 
 # Iteracion 6
 
-> En esta iteracion se crea e implementan usuarios y contraseñas para el acceso a la ventana de administador y de vendedor respectivamente.
+> En esta iteracion se crea e implementan usuarios y contraseñas para el acceso a la ventana de vendedor.
 
-**Como** Equipo de desarrolladores / cliente.
-**Quiero** Controlar el acceso del aplicativo por medio de cuentas de ingreso, con usuario y contraseña
-**Para** Entablar un sistema de accesos restringidos y seguridad.
+**Como** Cajero.
+**Quiero** Acceder al programa, con usuario y contraseña
+**Para** Que las ventas hechas queden registradas a mi nombre.
 ____________________________________________________________________________________________________________________________________
 
 > EPICA
@@ -31,8 +31,8 @@ ________________________________________________________________________________
 > Modelar, ejecutar y implementar el boton de finilazado de compra en el aplicativo.
 
 **Crear botón de finalizar compra en vista - 2 puntos.
-**Hacer comportamiento de dicho botón para que borre el listado de la venta actual y abra la ventana de factura - 4 puntos.
-**Crear ventana con datos de factura de venta actual - 4 puntos.
+**Hacer comportamiento de dicho botón para que borre el listado de la venta actual y abra la ventana de factura - 6 puntos.
+**Crear ventana con datos de factura de venta actual - 5 puntos.
 ____________________________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________
 
@@ -58,5 +58,4 @@ detalles finales.
 
 # Low
 
-Estimaciones de modelo, o demas accesibilidades del aplicativo no se lograron, este se dio por falta de conocimento en herramientas
-de este nuevo campo del modelo al usuario.
+Estimaciones de modelo, o demas accesibilidades del aplicativo no se lograron.
