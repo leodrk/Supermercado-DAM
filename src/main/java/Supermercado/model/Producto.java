@@ -19,7 +19,13 @@ public class Producto  {
         setCodigo(unCodigo);
         setPrecio(unPrecio);
         setNombre(unNombre);
-        setCantidad(1);
+        setCantidad(100);
+    }
+    public Producto (int unCodigo, String unNombre, double unPrecio, int cantidad){
+        setCodigo(unCodigo);
+        setNombre(unNombre);
+        setPrecio(unPrecio);
+        setCantidad(cantidad);
     }
 
     @Override
