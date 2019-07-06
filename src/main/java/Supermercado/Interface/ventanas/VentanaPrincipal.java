@@ -134,6 +134,7 @@ public class VentanaPrincipal {
         
         finCompra.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
+                tablaProductos.actualizarStocks();
                 String[] arguments = new String[]{VentanaPrincipal.getFactura(cajaService, args[0]), cajaService.getCajero()
                 };
                 marco.dispose();

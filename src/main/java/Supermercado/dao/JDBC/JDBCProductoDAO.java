@@ -44,12 +44,25 @@ public class JDBCProductoDAO implements ProductoDAO {
 				if(producto != null) {
 					throw new RuntimeException("Existe mas de un producto con el codigo " + unCodigo);
 				}
-				producto = new Producto(resultSet.getInt("codigo"),resultSet.getString("nombre"), resultSet.getInt("precio"));
+				producto = new Producto(resultSet.getInt("codigo"),resultSet.getString("nombre"), resultSet.getFloat("precio"), resultSet.getInt("cantidad"));
 			}
 			ps.close();
 			return producto;
 		});
 	}
+
+	@Override
+	public int getLastCodigo() {
+		return this.executeWithConnection(conn -> {
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM supermercado.productos ORDER BY codigo DESC LIMIT 1");
+			ResultSet resultSet = ps.executeQuery();
+			resultSet.next();
+			int result = resultSet.getInt("codigo");
+			ps.close();
+			return (result);
+		});
+	}
+
 
 	@Override
 	public void borrarProducto(Producto producto) {
@@ -65,9 +78,34 @@ public class JDBCProductoDAO implements ProductoDAO {
 	}
 
 	@Override
-	public void actualizarProducto() {
+	public void actualizarProducto(Producto producto) {
 
 	}
+
+	@Override
+	public void actualizarStock(Producto producto){
+		this.executeWithConnection(conn -> {
+			int codigo = producto.getCodigo();
+			int nuevaCant = producto.getCantidad();
+
+			PreparedStatement ps = conn.prepareStatement("UPDATE productos " +
+					"SET cantidad= " + nuevaCant + "  WHERE codigo='" + codigo + "'");
+			ps.execute();
+			ps.close();
+			return null;
+		});
+	}
+
+
+	/*this.executeWithConnection(conn -> {
+		int codigo = producto.getCodigo();
+		int nuevaCant = producto.getCantidad();
+
+		PreparedStatement ps = conn.prepareStatement("UPDATE productos " +
+				"SET cantidad= "+nuevaCant+"  WHERE nombre='"+nombre+"'");
+		ps.execute();
+		ps.close();
+		});*/
 
 	public void borrarTabla() {
 		this.executeWithConnection(conn -> {

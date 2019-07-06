@@ -1,5 +1,6 @@
 package Supermercado.Interface.ventanas.paneles;
 
+import Supermercado.Service.ProductService;
 import Supermercado.model.Producto;
 
 import javax.swing.*;
@@ -12,6 +13,7 @@ public class ProductListPanel extends JPanel {
     DefaultListModel<Producto> productos = new  DefaultListModel();
     JList productosHastaElMomento;
     JScrollPane scroller;
+    ProductService service = new ProductService();
 
 
     public ProductListPanel(){
@@ -42,4 +44,13 @@ public class ProductListPanel extends JPanel {
         return panel;
     }
 
+    public void actualizarStocks() {
+        int i = 0;
+        while (i < productos.size()){
+            Producto p = service.getProduct(productos.elementAt(i).getCodigo());
+            p.setCantidad(p.getCantidad() - 1);
+            service.actualizarStock(p);
+            i++;
+        }
     }
+}
