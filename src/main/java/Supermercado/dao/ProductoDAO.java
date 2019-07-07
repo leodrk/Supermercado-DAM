@@ -10,9 +10,13 @@ public interface ProductoDAO {
 
     public void borrarProducto(Producto producto);
 
-    public void actualizarProducto();
+    public void actualizarProducto(Producto producto);
+    public void actualizarStock(Producto producto);
 
     public void borrarTabla();
 
     Producto recuperar(int codigo);
+
+    int getLastCodigo();
+
 }

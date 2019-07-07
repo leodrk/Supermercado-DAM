@@ -21,6 +21,12 @@ public class Producto  {
         setNombre(unNombre);
         setCantidad(1);
     }
+    public Producto (int unCodigo, String unNombre, double unPrecio, int cantidad){
+        setCodigo(unCodigo);
+        setNombre(unNombre);
+        setPrecio(unPrecio);
+        setCantidad(cantidad);
+    }
 
     @Override
     public String toString() {
