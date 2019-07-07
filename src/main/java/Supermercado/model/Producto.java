@@ -19,7 +19,7 @@ public class Producto  {
         setCodigo(unCodigo);
         setPrecio(unPrecio);
         setNombre(unNombre);
-        setCantidad(100);
+        setCantidad(1);
     }
     public Producto (int unCodigo, String unNombre, double unPrecio, int cantidad){
         setCodigo(unCodigo);
