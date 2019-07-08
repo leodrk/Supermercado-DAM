@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLIntegrityConstraintViolationException;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -15,32 +17,47 @@ public class VentanaLogin extends JFrame{
         panel.setLayout(null);
         panel.setBackground(Color.gray);
         JButton botonIngresar = new JButton("Ingresar");
+        JButton botonRegistrar = new JButton("Registrar");
         JTextField usuarioTF = new JTextField();
         usuarioTF.requestFocusInWindow();
-        JTextField passwordTF = new JTextField();
-        JLabel ingreseUsuario = new JLabel("Ingrese Usuario");
-        JLabel ingresePassword = new JLabel("Ingrese Password");
-        JLabel usuarioOPasswordIncorrecto = new JLabel("usuario o password incorrectos!");
+        JPasswordField passwordTF = new JPasswordField();
+        passwordTF.setEchoChar('*');
+        JLabel ingreseUsuario = new JLabel("Usuario");
+        JLabel ingresePassword = new JLabel("Contraseña");
+        JLabel usuarioOPasswordIncorrecto = new JLabel("Usuario o Contraseña incorrectos!");
+        JLabel usuarioRegistrado = new JLabel("Usuario registrado!");
+        JLabel usuarioExistente = new JLabel ("El usuario ya existe!");
 
-        ingreseUsuario.setBounds(150 , 70 , 150,40);
-        usuarioTF.setBounds(150 , 100 , 200,30);
-        usuarioTF.setToolTipText("ingrese usuario...");
+        ingreseUsuario.setBounds(30 , 10 , 150,40);
+        usuarioTF.setBounds(30 , 40 , 200,30);
 
-        ingresePassword.setBounds(150 , 140 , 150,40);
-        passwordTF.setBounds(150 , 170 , 200,30);
-        passwordTF.setToolTipText("ingrese Password");
+        ingresePassword.setBounds(30 ,70 , 150,40);
+        passwordTF.setBounds(30 , 100 , 200,30);
 
-        usuarioOPasswordIncorrecto.setBounds(158, 270,200,30);
+        usuarioOPasswordIncorrecto.setBounds(30, 170,200,30);
         usuarioOPasswordIncorrecto.setVisible(false);
+        usuarioOPasswordIncorrecto.setForeground(Color.red);
+        
+        usuarioExistente.setBounds(30, 170,200,30);
+        usuarioExistente.setVisible(false);
+        usuarioExistente.setForeground(Color.red);
+        
+        usuarioRegistrado.setBounds(30, 170,200,30);
+        usuarioRegistrado.setVisible(false);
+        usuarioRegistrado.setForeground(Color.blue);
 
-        botonIngresar.setBounds(200 , 220, 100 ,40);
+        botonIngresar.setBounds(30 , 140, 95 ,30);
+        botonRegistrar.setBounds(135 , 140, 95 ,30);
 
         panel.add(ingreseUsuario);
         panel.add(usuarioTF);
         panel.add(ingresePassword);
         panel.add(passwordTF);
         panel.add(botonIngresar);
+        panel.add(botonRegistrar);
         panel.add(usuarioOPasswordIncorrecto);
+        panel.add(usuarioRegistrado);
+        panel.add(usuarioExistente);
 
 
         VentanaLogin ventana = new VentanaLogin();
@@ -52,7 +69,7 @@ public class VentanaLogin extends JFrame{
         botonIngresar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 String usuarioIngresado = usuarioTF.getText();
-                String passwordIngresado = passwordTF.getText();
+                String passwordIngresado = String.valueOf(passwordTF.getPassword());
                 UsuarioService service = new UsuarioService();
                 String[] arguments = new String[]{usuarioIngresado};
 
@@ -60,8 +77,43 @@ public class VentanaLogin extends JFrame{
                     VentanaPrincipal.main(arguments);
                     ventana.dispose();
                 } else {
+                	usuarioRegistrado.setVisible(false);
+                	usuarioExistente.setVisible(false);
                     usuarioOPasswordIncorrecto.setVisible(true);
                     usuarioTF.setText("");
+                    passwordTF.setText("");
+                }
+
+            }
+        });
+        
+        botonRegistrar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                String usuarioIngresado = usuarioTF.getText();
+                String passwordIngresado = String.valueOf(passwordTF.getPassword());
+                UsuarioService service = new UsuarioService();
+                String[] arguments = new String[]{usuarioIngresado};
+
+                if (usuarioIngresado != "" && passwordIngresado != "") {
+                	usuarioOPasswordIncorrecto.setVisible(false);
+                    usuarioRegistrado.setVisible(false);
+                	try
+                    {
+                		service.guardarUsuario(usuarioIngresado, passwordIngresado);
+                		usuarioExistente.setVisible(false);
+                        usuarioOPasswordIncorrecto.setVisible(false);
+                		usuarioRegistrado.setVisible(true);
+                		}
+                    catch (Exception e) {
+                    	usuarioExistente.setVisible(true);
+                    }
+                    usuarioTF.setText("");
+                    passwordTF.setText("");
+                } else {
+                	usuarioExistente.setVisible(false);
+                	usuarioRegistrado.setVisible(false);
+                    usuarioOPasswordIncorrecto.setVisible(true);
+                	usuarioTF.setText("");
                     passwordTF.setText("");
                 }
 
@@ -71,8 +123,8 @@ public class VentanaLogin extends JFrame{
 
 
     public VentanaLogin(){
-        setTitle("Supermercado-Dame LOGIN");
-        setSize(550, 370);
-        setLocation(400, 150);
+        setTitle("DAME - LOGIN");
+        setSize(265, 230);
+        setLocation(500, 170);
     }
 }

@@ -20,4 +20,8 @@ public class UsuarioService {
         }
         return u.comprobarPassword(password);
     }
+    
+    public void guardarUsuario (String nombreUsuario, String password) {
+    	this.dao.guardar(new Usuario(nombreUsuario, password));
+    }
 }
