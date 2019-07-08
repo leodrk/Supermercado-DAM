@@ -58,7 +58,7 @@ public class VentanaRegistrarProducto extends JFrame {
                 Producto p = new Producto(codigo, nombre,precio,cantidad );
                 pService.registrarProducto(p);
 
-                JOptionPane.showMessageDialog(new JFrame(), "se registro con exito el producto: " + nombre );
+                JOptionPane.showMessageDialog(new JFrame(), "se registro con exito el producto: " + nombre + " (código: " + codigo + ")" );
 
                 nombreTF.setText("");
                 precioTF.setText("");
