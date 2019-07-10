@@ -57,6 +57,7 @@ public class VentanaPrincipal {
         JButton num9 = new JButton("9");
         JButton num0 = new JButton("0");
         JButton finCompra = new JButton("Finalizar");
+        JButton registrarProducto = new JButton ("Nuevo");
         Label labelAlerta = new Label();
         labelAlerta.setText("Producto Incorrecto");
         labelAlerta.setVisible(false);
@@ -74,7 +75,11 @@ public class VentanaPrincipal {
         panel.setBackground(Color.gray);
         marco.add(panel);
         cajaDeTexto.requestFocusInWindow();
-        botonRegistrar.setBounds(230 , 175, 100 ,40);
+        cajaDeTexto.setBounds(230,35,115 ,40);
+
+        botonRegistrar.setBounds(230 , 90, 115 ,40);
+        registrarProducto.setBounds(230,180,115,40);
+        finCompra.setBounds(230, 135, 115, 40);
 
         num1.setBounds(50 , 30 , 45,45);
         num2.setBounds(103 , 30 , 45,45);
@@ -86,8 +91,7 @@ public class VentanaPrincipal {
         num8.setBounds(103 , 130 , 45,45);
         num9.setBounds(155 , 130 , 45 ,45);
         num0.setBounds(103,180,45,45);
-        labelAlerta.setBounds(230,70,130, 45);
-        finCompra.setBounds(230, 220, 100, 40);
+        labelAlerta.setBounds(230,60,130, 45);
         ArrayList <JButton> listaBotones = new ArrayList <>();
         listaBotones.add(num0);
         listaBotones.add(num1);
@@ -141,6 +145,15 @@ public class VentanaPrincipal {
                 VentanaFactura.main(arguments);
             }    
         });
+        
+        registrarProducto.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                tablaProductos.actualizarStocks();
+                String[] arguments = new String[]{cajaService.getCajero()
+                };
+                VentanaRegistrarProducto.main(arguments);
+            }    
+        });
 
         listaBotones.forEach(boton -> panel.add(boton));
         panel.add(botonRegistrar);
@@ -150,6 +163,7 @@ public class VentanaPrincipal {
         panel.add(tablaProductos.getPanel());
         panel.add(labelAlerta);
         panel.add(totalVenta);
+        panel.add(registrarProducto);
 
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

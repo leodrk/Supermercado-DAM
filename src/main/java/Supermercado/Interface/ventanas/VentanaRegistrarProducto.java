@@ -17,7 +17,8 @@ public class VentanaRegistrarProducto extends JFrame {
         panel.setLayout(null);
         panel.setBackground(Color.gray);
         JButton botonRegistrar = new JButton("Registrar");
-
+        JButton botonVolver = new JButton ("Volver");
+        
         JTextField nombreTF = new JTextField();
         nombreTF.requestFocusInWindow();
         JTextField precioTF = new JTextField();
@@ -27,17 +28,19 @@ public class VentanaRegistrarProducto extends JFrame {
         JLabel ingresePrecio = new JLabel("Ingrese Precio");
         JLabel ingreseCantidad = new JLabel("Ingrese Cantidad");
 
-        ingreseNombre.setBounds(150 , 80 , 150,25);
-        nombreTF.setBounds(150 , 100 , 200,30);
+        ingreseNombre.setBounds(20 , 10 , 150,25);
+        nombreTF.setBounds(20 , 30 , 200,30);
 
-        ingresePrecio.setBounds(150 , 130 , 150,25);
-        precioTF.setBounds(150 , 150 , 200,30);
+        ingresePrecio.setBounds(20 , 60 , 150,25);
+        precioTF.setBounds(20 , 80 , 200,30);
 
-        ingreseCantidad.setBounds(150 , 180 , 150,25);
-        cantidadTF.setBounds(150 , 200 , 200,30);
+        ingreseCantidad.setBounds(20 , 110 , 150,25);
+        cantidadTF.setBounds(20 , 130 , 200,30);
 
-        botonRegistrar.setBounds(200,250,100,25);
+        botonRegistrar.setBounds(20,170,95,25);
+        botonVolver.setBounds(125,170,95,25);
 
+        panel.add(botonVolver);
         panel.add(ingreseNombre);
         panel.add(nombreTF);
         panel.add(ingresePrecio);
@@ -66,6 +69,13 @@ public class VentanaRegistrarProducto extends JFrame {
             }
 
             });
+        
+        botonVolver.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+            	ventana.dispose();
+            }
+
+            });
 
         ventana.setVisible(true);
         ventana.add(panel);
@@ -75,9 +85,9 @@ public class VentanaRegistrarProducto extends JFrame {
     }
 
     public VentanaRegistrarProducto(){
-        setTitle("Supermercado-Dame Registrar Producto");
-        setSize(500, 370);
-        setLocation(400, 150);
+        setTitle("Producto Nuevo");
+        setSize(245, 240);
+        setLocation(560, 190);
 
     }
 }
