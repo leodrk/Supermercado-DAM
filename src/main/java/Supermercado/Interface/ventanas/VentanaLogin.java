@@ -125,6 +125,6 @@ public class VentanaLogin extends JFrame{
     public VentanaLogin(){
         setTitle("DAME - LOGIN");
         setSize(265, 230);
-        setLocation(500, 170);
+        setLocation(560, 190);
     }
 }
